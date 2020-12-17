@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <script>
+            function computerPlay() {
+                let randNum = 3 * Math.random();
+                if (randNum < 1) {
+                    return 'rock';
+                } else if (randNum < 2) {
+                    return 'paper';
+                } else {
+                    return 'scissors'
+                }
+            }
+
+            function playRound(playerChoice, computerChoice) {
+                if (playerChoice.toLowerCase() === computerChoice) {
+                    return "It's a tie! You both chose " + computerChoice;
+                } else if (computerChoice.toLowerCase() === 'rock') {
+                    if (playerChoice.toLowerCase() === 'paper') {
+                        return "You Won! paper beats rock";
+                    } else {
+                        return "You Lost:( rock beats scissors";
+                    }
+                } else if (computerChoice.toLowerCase() === 'paper') {
+                    if (playerChoice.toLowerCase() === 'rock') {
+                        return "You Lost:( paper beats rock";
+                    } else {
+                        return "You Won! scissors beats paper";
+                    }
+                } else {
+                    if (playerChoice.toLowerCase() === 'paper') {
+                        return "You Lost:( scissors beats paper";
+                    } else {
+                        return "You Won! rock beats scissors";
+                    }
+                }
+            }
+
+            function game() {
+                // plays rock paper scissors 5 times in a row
+                for (let i = 0; i < 5; i++) {
+                    computerChoiceNow = computerPlay();
+                    console.log("The computer chose " + computerChoiceNow);
+                    humanChoiceNow = prompt("Rock, paper, or scissors?");
+                    console.log("You chose " + humanChoiceNow);
+                    console.log(playRound(humanChoiceNow, computerChoiceNow));
+                }
+            }
+
+            game();
+        </script>
+    </header>
+    <body>
+
+    </body>
+</html>
