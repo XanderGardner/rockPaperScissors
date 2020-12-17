@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccc;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font-family: monospace;
+    font-size: 60px;
+    margin: 0px;
+    margin-top: 30px;
+}
+
+h2 {
+    font-family: monospace;
+    font-style: italic;
+    background-color: pink;
+    margin: 0px;
+    margin-top: 30px;
+}
+
+.option {
+    font-family: monospace;
+    margin: 0px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px pink;
+    background-color: white;
+    font-family: monospace;
+    font-size: 30px;
+}
+
+.option:hover {
+    box-shadow: 20px 20px 10px rgb(228, 71, 97);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.output {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 10px;
+    border-color: pink;
+    border-width: 10px;
+    margin-top: 60px;
+    width: 40vw;
+    height: 18vw;
+    font-family: monospace;
+    font-size: 18px;
+    overflow-y: scroll;
+}

@@ -1,57 +1,18 @@
 <!DOCTYPE html>
 <html>
     <header>
-        <script>
-            function computerPlay() {
-                let randNum = 3 * Math.random();
-                if (randNum < 1) {
-                    return 'rock';
-                } else if (randNum < 2) {
-                    return 'paper';
-                } else {
-                    return 'scissors'
-                }
-            }
-
-            function playRound(playerChoice, computerChoice) {
-                if (playerChoice.toLowerCase() === computerChoice) {
-                    return "It's a tie! You both chose " + computerChoice;
-                } else if (computerChoice.toLowerCase() === 'rock') {
-                    if (playerChoice.toLowerCase() === 'paper') {
-                        return "You Won! paper beats rock";
-                    } else {
-                        return "You Lost:( rock beats scissors";
-                    }
-                } else if (computerChoice.toLowerCase() === 'paper') {
-                    if (playerChoice.toLowerCase() === 'rock') {
-                        return "You Lost:( paper beats rock";
-                    } else {
-                        return "You Won! scissors beats paper";
-                    }
-                } else {
-                    if (playerChoice.toLowerCase() === 'paper') {
-                        return "You Lost:( scissors beats paper";
-                    } else {
-                        return "You Won! rock beats scissors";
-                    }
-                }
-            }
-
-            function game() {
-                // plays rock paper scissors 5 times in a row
-                for (let i = 0; i < 5; i++) {
-                    computerChoiceNow = computerPlay();
-                    console.log("The computer chose " + computerChoiceNow);
-                    humanChoiceNow = prompt("Rock, paper, or scissors?");
-                    console.log("You chose " + humanChoiceNow);
-                    console.log(playRound(humanChoiceNow, computerChoiceNow));
-                }
-            }
-
-            game();
-        </script>
+        <link href="styles.css" rel="stylesheet" type="text/css" media="all"/>
+        <title>Rock Paper Scissors</title>
     </header>
     <body>
-
+        <h1>Rock Paper Scissors</h1>
+        <h2>First to Five</h2>
+        <div class="buttons">
+            <button id="rock" class="option">Rock</button>
+            <button id="paper" class="option">Paper</button>
+            <button id="scissors" class="option">Scissors</button>
+        </div>
+        <p id="output" class="output">Results:</p>
+        <script type='text/javascript' src="script.js"></script>
     </body>
 </html>
